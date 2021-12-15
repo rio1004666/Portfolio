@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{ /* 전역 변수로 선언해줌 */
+            --font-size: 32px;
+            --background-color: thistle;
+            --text-color: whitesmoke;
+            --base-space: 8px;
+        }
+        .first-list{
+            background-color: var(--background-color);
+            
+            margin-left: var(--base-space);
+            color: var(--text-color);
+            font-size: var(--font-size); /* 변수를 그대로 사용함*/
+        }
+        .second-list{
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin-left: 16px;
+            margin-left: var(--base-space);
+            font-size: calc((--font-size)*2);/* calc메서드로 곱해줌 */
+        }
+        @media screen and (max-width: 768px){ /* 너비크기가 768px되면 바뀐다 :root설정으로 */
+            /* 반응형 */
+            :root{ 
+                --font-size: 32px;
+                --background-color: salmon;
+                --text-color: blue;
+                --base-space: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul class="first-list">
+        <li>Orange</li>
+        <li>Apple</li>
+
+    </ul>
+    <ul class="second-list">
+        <li>Korea</li>
+        <li>Japan</li>
+        <li>China</li>
+
+    </ul>
+</body>
+</html>
