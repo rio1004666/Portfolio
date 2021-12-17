@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/transform -->
+    <style>
+      .box {
+        width: 100px;
+        height: 120px;
+        background-color: brown;
+        margin-bottom: 20px;
+      }
+
+      .box1 {
+        transform: translateX(100px);
+      }
+
+      .box2 {
+        /* positive 양수는 오른쪽 아래쪽으로 이동
+          negative 음수는 왼쪽 위쪽으로 이동 */
+        transform: translate(-50px, -20px);
+      }
+
+      .box3 {
+        transform: scale(1.2);
+      }
+
+      .box4 {
+        /* rotate 45도 회전 */
+        transform: rotate(45deg);
+      }
+
+      .box5 {
+        /* scale 은 배수 확대  */
+        transform: translate(100px, 100px) scale(2) rotate(46deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+  </body>
+</html>
